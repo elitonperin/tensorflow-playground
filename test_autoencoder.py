@@ -6,11 +6,13 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 mnist = input_data.read_data_sets('MNIST_data', one_hot = True)
 
+
 def standard_scale(X_train, X_test):
     preprocessor = prep.StandardScaler().fit(X_train)
     X_train = preprocessor.transform(X_train)
     X_test = preprocessor.transform(X_test)
     return X_train, X_test
+
 
 def get_random_block_from_data(data, batch_size):
     start_index = np.random.randint(0, len(data) - batch_size)
@@ -78,9 +80,4 @@ for i in range(2):
     ae_restored = model_class.restore(saved_path)
     print "Total loss: " + str(ae_restored.calc_total_cost(X_test))
     print ae_restored.global_step
-
-
-
-
-
 

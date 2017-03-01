@@ -1,8 +1,10 @@
 *.pyc
-data/
+data/stanfordSentimentTreebank/
+data/__MACOSX
 *.png
 .ipynb_checkpoints/
-models/*
+models/test_d2v_model/*
 logs/*
 MNIST_data/*
 *.pkl
+text8.zip

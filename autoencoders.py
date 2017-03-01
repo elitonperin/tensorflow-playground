@@ -380,6 +380,7 @@ class MaskingNoiseAutoencoder(BaseAutoencoder):
 			# Code
 			self.hidden = hidden
 			# Decoding
+
 			for i in range(self.n_layers):
 				if i == 0:
 					tensor_in = self.hidden
